@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { TodoContext } from '../TodoContext/TodoContext';
 
-const TodoCounter=({total,completed})=>{
-    return(<h1>Has completado {total} de {completed} tarea</h1>)
+const TodoCounter=()=>{
+    const {totalTodos,completedTodos} =useContext(TodoContext);
+    return(<h1>Has completado {totalTodos} de {completedTodos} tarea</h1>)
 }
 
 export {TodoCounter}
